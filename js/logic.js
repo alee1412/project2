@@ -37,13 +37,13 @@ let myMap = L.map("map-id", {
 L.control.layers(baseMaps).addTo(myMap);
 
 function getColor(d) {
-  return d > 1000 ? '#800026' :
-         d > 500  ? '#BD0026' :
-         d > 200  ? '#E31A1C' :
-         d > 100  ? '#FC4E2A' :
-         d > 50   ? '#FD8D3C' :
-         d > 20   ? '#FEB24C' :
-         d > 10   ? '#FED976' :
+  return d > 35 ? '#800026' :
+         d > 30  ? '#BD0026' :
+         d > 25  ? '#E31A1C' :
+         d > 20  ? '#FC4E2A' :
+         d > 10   ? '#FD8D3C' :
+         d > 5   ? '#FEB24C' :
+         d > 0   ? '#FED976' :
                     '#FFEDA0';
 };
 
@@ -61,4 +61,4 @@ function style(feature) {
   };
 };
 
-L.geoJson(statesData, {style: style}).addTo(myMap);
+L.geoJson(ConstructionData, {style: style}).addTo(myMap);
