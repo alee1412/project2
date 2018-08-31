@@ -1,4 +1,4 @@
-var statedata = {
+const statedata = {
   "Construction": {
     "2008": {
       "Alabama": 18.124166666667,

@@ -1,9 +1,3 @@
-let years = ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"]
-let industries = Object.keys(statedata)
-
-// function to get average
-const getAverage = arr => arr.reduce((a,b) => a + b, 0) / arr.length
-
 // All Industries
 var ConstructionTrace = {
   x: years,
@@ -63,7 +57,7 @@ var MiningTrace = {
 var alldata = [ConstructionTrace, FinancialTrace, LeisureTrace, ManufacturingTrace, OtherTrace, ProfTrace, TradeTrace, InformationTrace, MiningTrace];
 
 window.onresize = function() {
-  Plotly.relayout(plot, {
+  Plotly.relayout(line_plot, {
     width: 0.9 * window.innerWidth,
     height: 0.9 * window.innerHeight
   })
@@ -92,7 +86,7 @@ function init() {
   var layout = {showlegend: true}
   
     
-  var LINE = document.getElementById("plot");
+  var LINE = document.getElementById("line_plot");
   Plotly.plot(LINE, data, layout);
   }
   
