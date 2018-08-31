@@ -39,12 +39,12 @@ function init() {
         target: 'y',
         order: 'descending'}]
     }];
-    var BAR = document.getElementById("plot");
+    var BAR = document.getElementById("bar_plot");
     Plotly.plot(BAR, data);
   }
   
   function updatePlotly(newx, newy) {
-    var BAR = document.getElementById("plot");
+    var BAR = document.getElementById("bar_plot");
   
     // Note the extra brackets around 'newx' and 'newy'
     Plotly.restyle(BAR, "x", [newx]);
