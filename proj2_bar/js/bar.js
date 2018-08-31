@@ -21,6 +21,18 @@ function init() {
     data = [{
       x: industries,
       y: getYear("2008"),
+      marker:{
+        color: ['#f0932b',
+        '#eb4d4b',
+        '#6ab04c',
+        '#7ed6df',
+        '#e056fd',
+        '#686de0',
+        '#30336b',
+        '#22a6b3',
+        '#ffbe76'
+        ]
+      },
       type: "bar",
       transforms: [{
         type: 'sort',
