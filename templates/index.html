@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask Plotlyjs Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+            <h1>Wages in the United States</h1>
+            <p>Use the interactive charts below to explore the dataset</p>
+        </div>
+        </div>
+
+    <div class="row">
+        <div class="col-md-12"></div>
+        <div id="visualization">
+                <div class="menu">
+                    <input type="button" id="zoomIn" value="Zoom in"/>
+                    <input type="button" id="zoomOut" value="Zoom out"/>
+                    <input type="button" id="moveLeft" value="Move left"/>
+                    <input type="button" id="moveRight" value="Move right"/>
+                    <input type="button" id="2008" value="2008"/>
+                    <input type="button" id="2009" value="2009"/>
+                    <input type="button" id="2010" value="2010"/>
+                    <input type="button" id="2011" value="2011"/>
+                    <input type="button" id="2012" value="2012"/>
+                    <input type="button" id="2013" value="2013"/>
+                    <input type="button" id="2014" value="2014"/>
+                    <input type="button" id="2015" value="2015"/>
+                    <input type="button" id="2016" value="2016"/>
+                    <input type="button" id="2017" value="2017"/>
+                    <input type="button" id="2018" value="2018"/>
+                </div> 
+            </div>
+        </div>
+
+
+
+
+  <script src="{{ url_for('static', filename='js/timeline.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/industries.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/leaflet.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/states.js') }}"></script>
+
+
+</body>
+
+</html>

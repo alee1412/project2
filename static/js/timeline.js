@@ -164,20 +164,15 @@
   var options = {
     // Set global item type. Type can also be specified for items individually
     // Available types: 'box' (default), 'point', 'range'
+    groupOrder: function (a, b) {
+      return a.value - b.value;
+    },
     start: '2008-01-10',
     end: '2008-12-31',
     editable: false,
     type: 'point',
     showMajorLabels: true, //changes whether year shows up or not
     autoResize: true
-  };
-
-  var container = document.getElementById('visualization');
-  var options = {
-    groupOrder: function (a, b) {
-      return a.value - b.value;
-    },
-    editable: true
   };
 
   var timeline = new vis.Timeline(container);
@@ -194,26 +189,43 @@
     });
 }
 
-  // var timeline = new vis.Timeline(container, items, options);
-
-  //   /**
-  //    * Move the timeline a given percentage to left or right
-  //    * @param {Number} percentage   For example 0.1 (left) or -0.1 (right)
-  //    */
-    // function move (percentage) {
-    //     var range = timeline.getWindow();
-    //     var interval = range.end - range.start;
-
-    //     timeline.setWindow({
-    //         start: range.start.valueOf() - interval * percentage,
-    //         end:   range.end.valueOf()   - interval * percentage
-    //     });
-    // }
-
     // attach events to the navigation buttons
     document.getElementById('zoomIn').onclick    = function () { timeline.zoomIn( 0.2); };
     document.getElementById('zoomOut').onclick   = function () { timeline.zoomOut( 0.2); };
     document.getElementById('moveLeft').onclick  = function () { move( 0.2); };
     document.getElementById('moveRight').onclick = function () { move(-0.2); };
+    document.getElementById('2008').onclick = function() {
+      timeline.setWindow('2008-01-01', '2008-12-31', {animation: true});
+    };
+    document.getElementById('2009').onclick = function() {
+      timeline.setWindow('2009-01-01', '2009-12-31', {animation: true});
+    };
+    document.getElementById('2010').onclick = function() {
+      timeline.setWindow('2010-01-01', '2010-12-31', {animation: true});
+    };
+    document.getElementById('2011').onclick = function() {
+      timeline.setWindow('2011-01-01', '2011-12-31', {animation: true});
+    };
+    document.getElementById('2012').onclick = function() {
+      timeline.setWindow('2012-01-01', '2012-12-31', {animation: true});
+    };
+    document.getElementById('2013').onclick = function() {
+      timeline.setWindow('2013-01-01', '2013-12-31', {animation: true});
+    };
+    document.getElementById('2014').onclick = function() {
+      timeline.setWindow('2014-01-01', '2014-12-31', {animation: true});
+    };
+    document.getElementById('2015').onclick = function() {
+      timeline.setWindow('2015-01-01', '2015-12-31', {animation: true});
+    };
+    document.getElementById('2016').onclick = function() {
+      timeline.setWindow('2016-01-01', '2016-12-31', {animation: true});
+    };
+    document.getElementById('2017').onclick = function() {
+      timeline.setWindow('2017-01-01', '2017-12-31', {animation: true});
+    };
+    document.getElementById('2018').onclick = function() {
+      timeline.setWindow('2018-01-01', '2018-12-31', {animation: true});
+    };
 
 
