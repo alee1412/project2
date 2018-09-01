@@ -39,8 +39,13 @@ function init() {
         target: 'y',
         order: 'descending'}]
     }];
+    var barlayout = {
+      title: "Wages by Industry",
+      showlegend: false
+    };
+
     var BAR = document.getElementById("bar_plot");
-    Plotly.plot(BAR, data);
+    Plotly.plot(BAR, data, barlayout);
   }
   
   function updatePlotly(newx, newy) {
