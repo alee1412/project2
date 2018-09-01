@@ -3,55 +3,82 @@ var ConstructionTrace = {
   x: years,
   y: getIndustry("Construction"),
   type: "scatter",
-  name: "Construction"
+  name: "Construction",
+  marker:{
+    color: '#f0932b'
+  }
 }
 var FinancialTrace = {
   x: years,
   y: getIndustry("Financial Activities"),
   type: "scatter",
-  name: "Financial Activities"
+  name: "Financial Activities",
+  marker:{
+    color: '#eb4d4b'
+  }
 }
 var LeisureTrace = {
   x: years,
   y: getIndustry("Leisure and Hospitality"),
   type: "scatter",
-  name: "Leisure and Hospitality"
+  name: "Leisure and Hospitality",
+  marker:{
+    color: '#6ab04c'
+  }
 }
 var ManufacturingTrace = {
   x: years,
   y: getIndustry("Manufacturing"),
   type: "scatter",
-  name: "Manufacturing"
+  name: "Manufacturing",
+  marker:{
+    color: '#7ed6df'
+  }
 }
 var OtherTrace = {
   x: years,
   y: getIndustry("Other Services"),
   type: "scatter",
-  name: "Other Services"
+  name: "Other Services",
+  marker:{
+    color: '#e056fd'
+  }
 }
 var ProfTrace = {
   x: years,
   y: getIndustry("Professional and Business Services"),
   type: "scatter",
-  name: "Professional and Business Services"
+  name: "Professional and Business Services",
+  marker:{
+    color: '#686de0'
+  }
 }
 var TradeTrace = {
   x: years,
   y: getIndustry("Trade Transportation and Utilities"),
   type: "scatter",
-  name: "Trade Transportation and Utilities"
+  name: "Trade Transportation and Utilities",
+  marker:{
+    color: '#30336b'
+  }
 }
 var InformationTrace = {
   x: years,
   y: getIndustry("Information"),
   type: "scatter",
-  name: "Information"
+  name: "Information",
+  marker:{
+    color: '#22a6b3'
+  }
 }
 var MiningTrace = {
   x: years,
   y: getIndustry("Mining and Logging"),
   type: "scatter",
-  name: "Mining and Logging"
+  name: "Mining and Logging",
+  marker:{
+    color: '#ffbe76'
+  }
 }
 
 var alldata = [ConstructionTrace, FinancialTrace, LeisureTrace, ManufacturingTrace, OtherTrace, ProfTrace, TradeTrace, InformationTrace, MiningTrace];
@@ -83,7 +110,10 @@ function getIndustry(industry){
 function init() {
   data = alldata;
 
-  var layout = {showlegend: true}
+  var layout = {
+    title: "Wages by Year",
+    showlegend: true
+  };
   
     
   var LINE = document.getElementById("line_plot");
