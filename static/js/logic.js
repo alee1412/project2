@@ -112,7 +112,7 @@ var layerControl = L.control.groupedLayers(baseMaps, overlayMaps, options);
 myMap.addControl(layerControl);   
 
 // Initialize legend
-let legend = L.control({position: 'bottomright'});
+let legend = L.control({position: 'bottomleft'});
 
 // Create legend breakdown
 legend.onAdd = function (map) {
@@ -124,7 +124,7 @@ legend.onAdd = function (map) {
   for (let i = 0; i < grades.length; i++) {
     div.innerHTML +=
       '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-      grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+      '$' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
   };
   
   return div;

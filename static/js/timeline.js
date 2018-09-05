@@ -10,8 +10,6 @@
 
   var items = new vis.DataSet([
     {id: 'A', content: 'Recession', start: '2007-12-31', end: '2009-06-01', type: 'background'},
-    {id: 'B', content: 'Occupy Wall Street', start: '2011-9-17', end: '2012-01-01', type: 'background'},
-    {id: 'C', content: 'Government shuts down from 1-16th due to ACA', start: '2013-01-01', end: '2013-01-16', type: 'background'},    
 
     {id: 0, group: 3, start: new Date(2008,1,22),  content: 'Housing Bubble Pops'},
     {id: 1, group: 3, start: new Date(2008,2,5),  content: 'US Stock Market Starts to Plunge'},
