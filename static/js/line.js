@@ -1,7 +1,7 @@
 // All Industries
 var ConstructionTrace = {
   x: years,
-  y: getIndustry("Construction"),
+  y: inflation(getIndustry("Construction")),
   type: "scatter",
   name: "Construction",
   marker:{
@@ -10,7 +10,7 @@ var ConstructionTrace = {
 }
 var FinancialTrace = {
   x: years,
-  y: getIndustry("Financial Activities"),
+  y: inflation(getIndustry("Financial Activities")),
   type: "scatter",
   name: "Financial Activities",
   marker:{
@@ -19,7 +19,7 @@ var FinancialTrace = {
 }
 var LeisureTrace = {
   x: years,
-  y: getIndustry("Leisure and Hospitality"),
+  y: inflation(getIndustry("Leisure and Hospitality")),
   type: "scatter",
   name: "Leisure and Hospitality",
   marker:{
@@ -28,7 +28,7 @@ var LeisureTrace = {
 }
 var ManufacturingTrace = {
   x: years,
-  y: getIndustry("Manufacturing"),
+  y: inflation(getIndustry("Manufacturing")),
   type: "scatter",
   name: "Manufacturing",
   marker:{
@@ -37,7 +37,7 @@ var ManufacturingTrace = {
 }
 var OtherTrace = {
   x: years,
-  y: getIndustry("Other Services"),
+  y: inflation(getIndustry("Other Services")),
   type: "scatter",
   name: "Other Services",
   marker:{
@@ -46,7 +46,7 @@ var OtherTrace = {
 }
 var ProfTrace = {
   x: years,
-  y: getIndustry("Professional and Business Services"),
+  y: inflation(getIndustry("Professional and Business Services")),
   type: "scatter",
   name: "Professional and Business Services",
   marker:{
@@ -55,7 +55,7 @@ var ProfTrace = {
 }
 var TradeTrace = {
   x: years,
-  y: getIndustry("Trade Transportation and Utilities"),
+  y: inflation(getIndustry("Trade Transportation and Utilities")),
   type: "scatter",
   name: "Trade Transportation and Utilities",
   marker:{
@@ -64,7 +64,7 @@ var TradeTrace = {
 }
 var InformationTrace = {
   x: years,
-  y: getIndustry("Information"),
+  y: inflation(getIndustry("Information")),
   type: "scatter",
   name: "Information",
   marker:{
@@ -73,7 +73,7 @@ var InformationTrace = {
 }
 var MiningTrace = {
   x: years,
-  y: getIndustry("Mining and Logging"),
+  y: inflation(getIndustry("Mining and Logging")),
   type: "scatter",
   name: "Mining and Logging",
   marker:{
@@ -104,6 +104,24 @@ function getIndustry(industry){
   };
 
   return average
+};
+
+function inflation(wageList){
+  adjustedList = []
+
+  adjustedList.push(wageList[0]*1.19)
+  adjustedList.push(wageList[1]*1.19)
+  adjustedList.push(wageList[2]*1.16)
+  adjustedList.push(wageList[3]*1.14)
+  adjustedList.push(wageList[4]*1.11)
+  adjustedList.push(wageList[5]*1.09)
+  adjustedList.push(wageList[6]*1.08)
+  adjustedList.push(wageList[7]*1.08)
+  adjustedList.push(wageList[8]*1.06)
+  adjustedList.push(wageList[9]*1.04)
+  adjustedList.push(wageList[10])
+
+  return adjustedList
 };
 
 
